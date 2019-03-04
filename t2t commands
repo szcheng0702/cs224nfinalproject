@@ -1,0 +1,7 @@
+t2t commands
+
+#data generation
+$t2t-datagen --t2t_usr_dir=/Users/sizhucheng/Desktop/cs224nproject  --data_dir=/Users/sizhucheng/Desktop/cs224nproject/data --problem=mathword_problems
+
+#train
+$t2t-trainer --data_dir=/Users/sizhucheng/Desktop/cs224nproject/data --problem=mathword_problems --model=transformer --hparams_set=transformer_prepend --output_dir=Users/sizhucheng/Desktop/cs224nproject --t2t_usr_dir=/Users/sizhucheng/Desktop/cs224nproject
