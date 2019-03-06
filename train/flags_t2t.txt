@@ -8,10 +8,10 @@
 --hparams=
 --problem=mathword_problems
 --data_dir=../cs224nfinalproject/data
---train_steps=250000
+--train_steps=200000
 --eval_early_stopping_metric=loss
 --eval_early_stopping_metric_delta=0.1
---eval_early_stopping_steps=None
+--eval_early_stopping_steps=10
 --eval_early_stopping_metric_minimize=True
 --eval_timeout_mins=240
 --eval_run_autoregressive=False
@@ -26,7 +26,7 @@
 --eval_throttle_seconds=600
 --sync=False
 --worker_job=/job:localhost
---worker_gpu=1
+--worker_gpu=2
 --worker_replicas=1
 --worker_id=0
 --worker_gpu_memory_fraction=0.95

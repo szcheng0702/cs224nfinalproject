@@ -123,7 +123,7 @@
 "symbol_modality_num_shards": 16,
 "symbol_modality_skip_top": false,
 "tpu_enable_host_call": false,
-"train_steps": 250000,
+"train_steps": 200000,
 "unidirectional_encoder": false,
 "use_fixed_batch_size": false,
 "use_pad_remover": true,
