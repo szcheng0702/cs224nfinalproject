@@ -17,7 +17,7 @@ class MathwordProblems(text_problems.Text2TextProblem):
 
   @property
   def approx_vocab_size(self):
-    return 4000
+    return 5000
 
   @property
   def is_generate_per_split(self):
@@ -43,18 +43,18 @@ class MathwordProblems(text_problems.Text2TextProblem):
     del tmp_dir
     del dataset_split
 
-    with open('AllData.json') as j_data:
-        data = json.load(j_data)
+    with open('alltraining.json') as j_data:
+        q2e = json.load(j_data)
 
-    q2e={}
+    print(len(q2e))
 
-    for ex in data:
-        if ex.get('sQuestion') and ex.get('lEquations'):
-            if len(ex['lEquations'])>1:
-                dict_value=' '.join(ex['lEquations'])
-            else:
-                dict_value=ex['lEquations'][0]
-            q2e[ex['sQuestion']]=dict_value
+    # for ex in data:
+    #     if ex.get('sQuestion') and ex.get('lEquations'):
+    #         if len(ex['lEquations'])>1:
+    #             dict_value=' '.join(ex['lEquations'])
+    #         else:
+    #             dict_value=ex['lEquations'][0]
+    #         q2e[ex['sQuestion']]=dict_value
 
 
     for que,equ in q2e.items():
